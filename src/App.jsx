@@ -36,7 +36,6 @@ function App() {
   ]
 
   function toggleHandler() {
-    // console.log('Clicked');
     setAnnual(oldAnnual => !oldAnnual);
   }
 
@@ -47,7 +46,7 @@ function App() {
       <h1 className='text-3xl text-grayishBlue mt-12 md:mt-2'>Our Pricing</h1>
 
       {/* Toggle */}
-      <div className='flex space-x-6 pt-6 pb-12 items-center' onClick={toggleHandler}>
+      <div className='flex space-x-6 pt-12 pb-16 items-center md:pt-8 md:pb-12' onClick={toggleHandler}>
         <p className='text-md text-lightGrayishBlue'>Annually</p>
         <div className='relative bg-gradient-to-r from-lightPurple to-strongPurple w-14 h-8 rounded-full cursor-pointer hover:to-[#c5c8f3] hover:from-[#c5c8f3]'>
           <div className={`absolute transition-all w-6 h-6 bg-white top-1 rounded-full ${annual ? 'left-1' : 'left-7'}`}></div>

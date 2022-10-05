@@ -17,7 +17,7 @@ function Card({ highlight, title, price, storage, users, transfer, index }) {
       <p
         className={`
           text-center text-lg
-          ${highlight ? 'text-white' : 'text-darkGrayishBlue'}
+          ${highlight ? 'text-white' : 'text-grayishBlue'}
         `}
       >
         {title}
