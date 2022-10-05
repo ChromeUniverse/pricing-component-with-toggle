@@ -44,7 +44,7 @@ function App() {
     <main className="mx-auto flex flex-col items-center">
 
       {/* Title */}
-      <h1 className='text-3xl text-grayishBlue'>Our Pricing</h1>
+      <h1 className='text-3xl text-grayishBlue mt-12 md:mt-2'>Our Pricing</h1>
 
       {/* Toggle */}
       <div className='flex space-x-6 pt-6 pb-12 items-center' onClick={toggleHandler}>
@@ -56,9 +56,10 @@ function App() {
       </div>
 
       {/* Cards container */}
-      <div className='flex flex-row items-center'>
+      <div className='flex flex-col space-y-12 mb-12 md:mb-0 md:space-y-0 md:flex-row md:items-center'>
         {tiers.map((tier, index) => (
           <Card
+            key={index}
             highlight={tier.highlight}
             title={tier.title}
             price={annual ? tier.annualPrice : tier.monthlyPrice}

@@ -5,19 +5,19 @@ function Card({ highlight, title, price, storage, users, transfer, index }) {
     // Card div
     <div
       className={`
-        bg-white px-6 py-6 w-[360px] drop-shadow-2xl
+        bg-white px-6 py-6 w-[340px] drop-shadow-2xl
         ${highlight ? "bg-gradient-to-b from-lightPurple to-strongPurple py-12" : ""}
-        ${index === 0 ? 'rounded-l-xl' : ''}
-        ${index === 1 ? 'rounded-xl' : ''}
-        ${index === 2 ? 'rounded-r-xl' : ''}
+        ${index === 0 ? 'rounded-xl md:rounded-l-xl' : ''}
+        ${index === 1 ? 'rounded-xl md:rounded-xl' : ''}
+        ${index === 2 ? 'rounded-xl md:rounded-r-xl' : ''}
       `}
     >
 
       {/* Title */}
       <p
         className={`
-          text-grayishBlue text-center text-lg
-          ${highlight ? 'text-white' : ''}
+          text-center text-lg
+          ${highlight ? 'text-white' : 'text-darkGrayishBlue'}
         `}
       >
         {title}
@@ -25,8 +25,8 @@ function Card({ highlight, title, price, storage, users, transfer, index }) {
 
       {/* Price */}
       <div className="flex flex-row space-x-2 items-center justify-center">
-        <span className={`text-darkGrayishBlue text-4xl ${highlight ? 'text-white' : ''}`}>$</span>
-        <h2 className={`text-darkGrayishBlue text-center text-7xl py-6 ${highlight ? 'text-white' : ''}`}>
+        <span className={`text-4xl ${highlight ? 'text-white' : 'text-darkGrayishBlue'}`}>$</span>
+        <h2 className={`text-center text-7xl py-6 ${highlight ? 'text-white' : 'text-darkGrayishBlue'}`}>
           {price}
         </h2>
       </div>
