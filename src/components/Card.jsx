@@ -8,7 +8,7 @@ function Card({ highlight, title, price, storage, users, transfer, index }) {
         bg-white px-6 py-6 w-[340px] drop-shadow-2xl
         ${highlight ? "bg-gradient-to-b from-lightPurple to-strongPurple md:py-12" : ""}
         ${index === 0 ? 'rounded-xl md:rounded-none md:rounded-l-xl' : ''}
-        // ${index === 1 ? 'rounded-xl md:rounded-xl' : ''}
+        ${index === 1 ? 'rounded-xl md:rounded-xl' : ''}
         ${index === 2 ? 'rounded-xl md:rounded-none md:rounded-r-xl' : ''}
       `}
     >
